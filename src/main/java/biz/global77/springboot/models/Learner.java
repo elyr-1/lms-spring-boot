@@ -1,5 +1,7 @@
 package biz.global77.springboot.models;
 
+import org.hibernate.validator.constraints.Length;
+
 import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,6 +16,10 @@ public class Learner implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Pattern(regexp = "^[\\-0-9]*$", message = "Must be in the format XX-XXXX")
+    @Length(min = 7, max = 7, message = "Must be 7 characters, including hyphen(-)")
+    private String learnerId;
+
     @NotBlank(message = "Must not be left blank")
     private String firstName;
 
@@ -25,12 +31,16 @@ public class Learner implements Serializable {
     @NotNull(message = "Must not be left blank")
     private Integer age;
 
-    @NotBlank(message = "Must not be left blank")
+    @NotNull(message = "Must not be left blank")
     @Pattern(regexp = "^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$", message = "Please enter a valid email format")
     private String email;
 
     public Long getId() {
         return id;
+    }
+
+    public String getLearnerId() {
+        return learnerId;
     }
 
     public String getFirstName() {
@@ -53,6 +63,10 @@ public class Learner implements Serializable {
         this.id = id;
     }
 
+    public void setLearnerId(String learnerId) {
+        this.learnerId = learnerId;
+    }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -69,7 +83,8 @@ public class Learner implements Serializable {
         this.email = email;
     }
 
-    public Learner(String firstName, String lastName, Integer age, String email) {
+    public Learner(String learnerId, String firstName, String lastName, Integer age, String email) {
+        this.learnerId = learnerId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;

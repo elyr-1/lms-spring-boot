@@ -4,17 +4,10 @@
 
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <%@include file="shared/base.jsp"%>
     <title>77LMS | Home</title>
-    <link rel = "icon" href ="https://raw.githubusercontent.com/elyrick/images-src/main/images/77lms%20-%20icon-modified.png" type = "image/x-icon">
 </head>
-<body style="font-family: Arial, Helvetica, sans-serif">
-
+<body style="font-family: 'Roboto', sans-serif">
     <%--Navbar Start--%>
     <%@include file="shared/navbar.jsp"%>
     <%--Navbar End--%>
@@ -38,25 +31,23 @@
                     <div class="hero-summary">
                         <div class="row">
                             <div class="item col-4">
-                                <div class="summary-desc mb-1">Content</div>
+                                <div class="summary-desc mb-1"><i class="icon fas fa-video me-2"></i>Content</div>
                                 <h4 class="summary-heading">80+ <span class="desc">Videos</span></h4>
 
                             </div>
                             <div class="item col-4">
-                                <div class="summary-desc mb-1">Duration</div>
+                                <div class="summary-desc mb-1"><i class="icon fas fa-clock me-2"></i>Duration</div>
                                 <h4 class="summary-heading">72 <span class="desc">Hours</span></h4>
 
                             </div>
                             <div class="item col-4">
                                 <div class="summary-desc mb-1"><i class="icon fas fa-user-circle me-2"></i>Access</div>
                                 <h4 class="summary-heading">Lifetime</h4>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </section>
     </header>
 
@@ -65,11 +56,14 @@
             <div id="section-overview" class="section-overview section pt-md-4 pt-lg-5">
                 <div class="container py-5">
                     <div class="section-col-max mx-auto">
-                        <h3 class="section-title mb-4">What Will You Learn</h3>
+                        <h3 class="section-title mb-4 text-center">What Will You Learn</h3>
                         <p class="mb-4">Your course overview goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae posuere nibh, at posuere enim. Sed vulputate ante congue, euismod odio a, gravida neque. Maecenas volutpat risus dolor.</p>
                         <div class="text-center mb-3">
-                            <ul class="col mx-auto d-inline-block">
+                            <ul class="col-list list-unstyled mx-auto d-inline-block">
                                 <li><i class="theme-check-icon fas fa-check me-2"></i>Course highlight lorem ipsum</li>
+                                <li><i class="theme-check-icon fas fa-check me-2"></i>Course highlight  lorem ipsum</li>
+                                <li><i class="theme-check-icon fas fa-check me-2"></i>Course highlight  lorem ipsum</li>
+                                <li><i class="theme-check-icon fas fa-check me-2"></i>Course highlight  lorem ipsum</li>
                                 <li><i class="theme-check-icon fas fa-check me-2"></i>Course highlight  lorem ipsum</li>
                                 <li><i class="theme-check-icon fas fa-check me-2"></i>Course highlight  lorem ipsum</li>
                             </ul>

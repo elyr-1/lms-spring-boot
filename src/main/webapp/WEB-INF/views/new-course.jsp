@@ -5,21 +5,14 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <title>77LMS | Learners</title>
-    <link rel = "icon" href ="https://raw.githubusercontent.com/elyrick/images-src/main/images/77lms%20-%20icon-modified.png" type = "image/x-icon">
+    <%@include file="shared/base.jsp"%>
+    <title>77LMS | Add Course</title>
 </head>
-<body style="font-family: Arial, Helvetica, sans-serif">
+<body style="font-family: 'Roboto', sans-serif">
     <%--Navbar Start--%>
     <%@include file="shared/navbar.jsp"%>
     <%--Navbar End--%>
 
-    <br><br>
     <%--Main Content Start--%>
     <div class="container overflow-auto">
         <div class="row">
@@ -39,8 +32,8 @@
                                 <div class="text-danger"><form:errors path="description"></form:errors></div>
                             </div>
                             <hr class="my-4">
-                            <div class="d-grid">
-                                <button class="btn btn-primary" type="submit">Submit</button>
+                            <div class="d-grid col-6 mx-auto">
+                                <button class="btn btn-primary" style="border-radius: 30px" type="submit">Submit</button>
                             </div>
                         </form:form>
                     </div>

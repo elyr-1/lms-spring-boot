@@ -17,7 +17,7 @@ public class LearnerController {
     @Autowired
     LearnerService learnerService;
 
-    @GetMapping(value = "/enroll")
+    @GetMapping(value = "enroll")
     public ModelAndView showForm() {
         return new ModelAndView("enroll", "learnerForm", new Learner());
     }
@@ -25,7 +25,7 @@ public class LearnerController {
     // GET all learners
     @GetMapping("learner-list")
     public String learnerList(Model learner) {
-        learner.addAttribute("learnerList", learnerService.learnerList());
+        learner.addAttribute("learnerList", learnerService.findAll());
         return "learner-list";
     }
 
@@ -46,4 +46,15 @@ public class LearnerController {
         return "acknowledge";
     }
 
+    @RequestMapping(value = "learner/update", method = {RequestMethod.PUT, RequestMethod.GET})
+    public String edit(Learner learner) {
+            learnerService.edit(learner);
+            return "redirect:/learner-list";
+        }
+
+    @RequestMapping(value = "learner/delete", method = {RequestMethod.DELETE, RequestMethod.GET})
+    public String delete(String learnerId) {
+        learnerService.delete(learnerId);
+        return "redirect:/learner-list";
+    }
 }

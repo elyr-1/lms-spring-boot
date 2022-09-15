@@ -6,7 +6,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item"><a class="nav-link" aria-current="page" href="home">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about">About Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="learner-list">Learners</a></li>
@@ -18,6 +18,10 @@
                     </ul>
                 </li>
             </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Type here to search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
         </div>
     </div>
 </nav>
